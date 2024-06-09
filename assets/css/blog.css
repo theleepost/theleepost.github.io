@@ -1,0 +1,194 @@
+@font-face {
+  font-family: "KoPubWorld-Dotum";
+  src: url("/font/KoPubWorld_Dotum_Medium.ttf") format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "KoPubWorld-Dotum";
+  src: url("/font/KoPubWorld_Dotum_Bold.ttf") format('truetype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: "KoPubWorld-Dotum";
+  src: url("/font/KoPubWorld_Dotum_Light.ttf") format('truetype');
+  font-weight: lighter;
+}
+
+.blog-header {
+  line-height: 1;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.blog-header-logo {
+  font-family: "Times New Roman", "KoPubWorld-Dotum";
+  font-size: 2.25rem;
+}
+
+.blog-header-logo:hover {
+  text-decoration: none;
+}
+
+.display-4 {
+  font-size: 2.5rem;
+}
+@media (min-width: 768px) {
+  .display-4 {
+    font-size: 3rem;
+  }
+}
+
+.jumbotron {
+  height: 200px;
+  background-image: url("https://images.pexels.com/photos/1036808/pexels-photo-1036808.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: right;
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+}
+
+.nav-scroller .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.nav-scroller .nav-link {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: .875rem;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+.dropdown-header {
+  font-family: sans-serif;
+}
+.dropdown-item {
+  font-size: 0.9rem;
+}
+
+.card-img-right {
+  height: 100%;
+  border-radius: 0 3px 3px 0;
+}
+
+.flex-auto {
+  -ms-flex: 0 0 auto;
+  -webkit-box-flex: 0;
+  flex: 0 0 auto;
+}
+
+.h-250 { height: 250px; }
+@media (min-width: 768px) {
+  .h-md-250 { height: 250px; }
+}
+
+.border-top { border-top: 1px solid #e5e5e5; }
+.border-bottom { border-bottom: 1px solid #e5e5e5; }
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+/* Pagination */
+.blog-pagination {
+  margin-bottom: 4rem;
+}
+.blog-pagination > .btn {
+  border-radius: 2rem;
+}
+
+/* Posts (preview) */
+.blog-post {
+  margin-bottom: 2rem;
+}
+.blog-post-title {
+  margin-bottom: .5rem;
+  font-size: 1.8rem;
+}
+.blog-post-meta {
+  margin-top: .5rem;
+  font-size: .9rem;
+  font-style: italic;
+  color: #999;
+}
+
+.blog-post-description {
+  font-size: 0.85rem;
+}
+
+/* Single post */
+.article-container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.article {
+  font-family: "KopubWorld-Dotum";
+  text-align: justify;
+  line-height: 180%;
+}
+
+.article h2, h3, h4, h5, h6 {
+  font-family: "KoPubWorld-Dotum";
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: "Times New Roman", "KoPubWorld-Dotum";
+  font-weight: normal;
+}
+
+.about {
+  padding-top: 50px;
+  font-family: "Noto Sans Korean";
+  text-align: left;
+}
+.profile-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  border-radius: 50%;
+}
+
+.bi-search::before {
+  padding-top: 0.3rem;
+}
+
+.right {
+  float:right;
+  max-width: 48%;
+  margin-left: 2%;
+  padding: auto;
+}
+
+.left {
+  float:left;
+  max-width: 48%;
+  margin-right: 2%;
+}
+
+.center {
+  display: block;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 0.8rem;
+}
+
+.no-dot {
+  list-style-type: none;
+}

@@ -1,0 +1,36 @@
+{{- $page := .page }}
+{{- $menuID := .menuID }}
+
+{{- with index site.Menus $menuID }}
+  <nav class="nav d-flex justify-content-end">
+    {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+  </nav>
+{{- end }}
+
+{{- define "partials/inline/menu/walk.html" }}
+  {{- $page := .page }}
+  {{- range .menuEntries }}
+    <!-- Per menu-entry -->
+    {{- $name := .Name }}
+    {{- $is_ext := eq $name `Hugo` }}
+
+    {{- if .HasChildren }}
+    <div class="dropdown">
+      <a class="px-4 text-muted dropdown-toggle" href="/posts" role="button" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">{{ $name }}</a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <strong class="dropdown-header">Categories</strong>
+        {{- range .Children }}
+          <li>
+              <a href="{{ .URL }}" class="dropdown-item">{{ .Name }}</a>
+          </li>
+        {{- end }}
+      </ul>
+    </div>
+    
+    {{- else }}
+    <li>
+      <a class="px-4 text-muted" href="{{.URL | absURL}}">{{ $name }}{{- if $is_ext }} {{ .Post }}{{- end }}</a>    
+    </li>
+    {{- end }}
+  {{- end }}
+{{- end }}

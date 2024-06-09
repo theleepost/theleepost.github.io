@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="row article-main">
+    <div class="col-lg-8 mx-auto text-center">
+        <h3>{{ .Title }}</h3>
+        <div class="article">
+          {{- range $key, $value := .Site.Taxonomies.categories }}
+            <li><a href="{{ .Page.RelPermalink }}">
+              {{ $key }}
+          </a></li>
+          {{- end }}
+        </div>
+    </div>
+</div>
+{{ end }}

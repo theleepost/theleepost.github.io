@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class="row article-container">
+    <div class="col-lg-8 mx-auto text-center">
+        <img src="{{ "/profile.JPG" }}" style="max-width: 40%;" class="img-fluid d-block mx-auto rounded-circle mb-4">
+        <h3>{{ .Title }}</h3>
+        <div class="about">
+            {{ .Content }}
+        </div>
+    </div>
+</div>
+{{ end }}

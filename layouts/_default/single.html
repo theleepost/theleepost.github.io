@@ -1,0 +1,20 @@
+{{ define "main" }}
+<div class="row article-container">
+  <div class="col-lg-9 mx-auto">
+    <!-- Article title and meta -->
+    <h2>{{ .Title }}</h2>
+    <div class="text-muted">
+      by Soomin Lee | 
+      {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+      {{ $dateHuman := .Date | time.Format ":date_long" }}
+      <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+    </div>
+    <!-- Article main -->
+    <hr>
+    <div class="article">
+      {{ .Content }}
+    </div>
+    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+  </div>
+</div>
+{{ end }}

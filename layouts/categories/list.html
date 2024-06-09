@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="mt-4 text-center">
+    <h2>{{ .Title }}</h2>
+</div>
+<div class="mt-4 mb-2">
+    <strong>Latest Posts</strong>
+</div>
+
+{{ $paginator := .Paginate ( where .Pages "Type" "posts" ).ByDate.Reverse }}
+  {{ range $paginator.Pages }}
+    <div class="blog-post">
+      <h3><a class="text-dark" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
+      {{ .Summary | safeHTML | truncate 150 }}
+      <p class="blog-post-meta">by <a class="text-dark" href="/about">Soomin Lee</a>, {{ .Date | time.Format ":date_medium" }}</p>
+      <hr>
+    </div>
+  {{ end }}
+  {{ template "_internal/pagination.html" . }}
+{{ end }}

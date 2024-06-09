@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+  <body>
+  <div class="container">
+    <!-- header -->
+    <header class="blog-header py-3">
+      {{ partial "header.html" . }}
+    </header>
+    <!-- menu -->
+    <div class="nav-scroller py-3 mb-2">
+      {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+    </div>
+    <!-- main -->
+    <main role="main">
+      {{ block "main" . }}{{ end }}
+    </main>
+    <!-- footer -->
+    <footer class="blog-footer">    
+      {{ partial "footer.html" . }}
+    </footer>
+  </div>
+  </body>
+</html>

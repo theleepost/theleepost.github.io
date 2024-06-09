@@ -1,0 +1,53 @@
+{{ define "main" }}
+<!-- Special Post -->
+<div class="jumbotron p-3 p-md-3 rounded bg-light">
+  <h1 class="display-6 font-italic text-end">Vision</h1>
+  <p class="lead my-3 text-end">Capturing My World through Tech and Lens</p>
+</div>
+
+<!-- 2 Pinned Posts -->
+<div class="row mb-2">
+  {{ $pinned := .Site.Taxonomies.categories.Get "pin" }}
+  {{ $pinned_pages := $pinned.Pages }}
+  {{- range $pinned_pages }}
+  <div class="col-md-6">
+    <div class="card flex-md-row mb-4 box-shadow h-md-250">
+      <div class="card-body d-flex flex-column align-items-start">
+        {{- range .Params.categories }}
+          {{- if ne . "pin" }}
+          <strong class="d-inline-block mb-2 text-primary"><a href="/categories/{{ . | urlize }}">{{ . }}</a></strong>
+          {{- end }}
+        {{- end }}
+        <h3><a class="text-dark" href="{{ .RelPermalink }}">{{ .LinkTitle | safeHTML | truncate 16 }}</a></h3>
+        <p class="card-text mb-auto">{{ .Summary | safeHTML | truncate 80 }}</p>
+        <p class="blog-post-meta">by <a class="text-dark" href="/about">Soomin Lee</a>, {{ .Date | time.Format ":date_medium" }}</p>
+      </div>
+    </div>
+  </div>
+  {{- end }}
+</div>
+
+<!-- Main Section -->
+<div class="row">
+  <!-- Latest Posts -->
+  <div class="col-md-8 blog-main">
+    {{ .Content }}
+    {{- range ( where site.RegularPages "Type" "posts" | symdiff $pinned_pages ).ByDate.Reverse.Limit 5 }}
+    <div class="blog-post">
+      <h2 class="blog-post-title"><a class="text-dark" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+      <p class="blog-post-description">{{ .Summary | safeHTML | truncate 150 }}</p>
+      <p class="blog-post-meta">by <a class="text-dark" href="/about">Soomin Lee</a>, {{ .Date | time.Format ":date_medium" }}</p>
+      <hr>
+    </div>
+    {{- end }}
+
+    <nav class="nav d-flex justify-content-end mb-4">
+      <a href="/posts">Other posts >></a>
+    </nav>
+  </div>
+  <!-- Sidebar -->
+  <aside class="col-md-4 blog-sidebar">
+    {{ partial "sidebar.html" . }}
+  </aside>
+</div>
+{{ end }}

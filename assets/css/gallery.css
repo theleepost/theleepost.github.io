@@ -1,0 +1,22 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.photo {
+    position: relative;
+    width: calc(33.33% - 10px);
+}
+.photo img {
+    width: 100%;
+    height: auto;
+    padding-bottom: 3px;
+}
+.photo .location {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 5px;
+}
