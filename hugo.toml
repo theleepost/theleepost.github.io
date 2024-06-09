@@ -1,4 +1,4 @@
-baseURL = "https://example.org/"
+baseURL = "https://theleepost.github.io"
 title = "The Lee Post"
 paginate = 6
 defaultContentLanguage = "ko"
