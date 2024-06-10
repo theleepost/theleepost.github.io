@@ -2,7 +2,6 @@ baseURL = "https://theleepost.github.io"
 title = "The Lee Post"
 paginate = 6
 defaultContentLanguage = "ko"
-googleAnalytics = "G-RJ3KTZK8X6"
 
 [taxonomies]
   tag = "tags"
