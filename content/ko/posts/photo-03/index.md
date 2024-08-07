@@ -1,8 +1,9 @@
 +++
 title = '5월 사진 정리'
+url = 'photo/2024-05'
 date = 2024-06-04T11:00:00-07:00
 draft = false
-categories = ["Photograph", "pin"]
+categories = ["Photograph"]
 +++
 
 ### 한화의 도시, 대전으로

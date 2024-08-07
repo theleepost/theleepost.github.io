@@ -1,5 +1,6 @@
 +++
 title = '4월 사진 정리'
+url = 'photo/2024-04'
 date = 2024-05-05T11:00:00-07:00
 draft = false
 categories = ["Photograph"]
