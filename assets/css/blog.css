@@ -22,7 +22,7 @@
 
 .blog-header-logo {
   font-family: "Times New Roman", "KoPubWorld-Dotum";
-  font-size: 2.25rem;
+  font-size: 2.5rem;
 }
 
 .blog-header-logo:hover {
@@ -36,14 +36,6 @@
   .display-4 {
     font-size: 3rem;
   }
-}
-
-.jumbotron {
-  height: 200px;
-  background-image: url("https://images.pexels.com/photos/1036808/pexels-photo-1036808.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  text-align: right;
 }
 
 .nav-scroller {
@@ -82,11 +74,6 @@
   font-size: 0.9rem;
 }
 
-.card-img-right {
-  height: 100%;
-  border-radius: 0 3px 3px 0;
-}
-
 .flex-auto {
   -ms-flex: 0 0 auto;
   -webkit-box-flex: 0;
@@ -102,6 +89,15 @@
 .border-bottom { border-bottom: 1px solid #e5e5e5; }
 
 .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+.card {
+  background-size: cover;
+  background-position: center;
+  
+}
+.card-body {
+  color: rgb(0, 0, 0);
+}
 
 /* Pagination */
 .blog-pagination {

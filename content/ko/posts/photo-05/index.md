@@ -1,6 +1,7 @@
 +++
 title = '7월 사진 정리'
 url = 'photo/2024-07'
+image = '/post-img/photo-05/DSC00387.JPG'
 date = 2024-08-05T11:00:00-07:00
 draft = false
 categories = ["Photograph", "pin"]

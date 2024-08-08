@@ -1,6 +1,7 @@
 +++
 title = '[졸업프로젝트] 1: 우리는 오토파일럿을 구현할 수 있을까'
 url = 'project/ai-autopilot-1'
+image = '/post-img/grad-project/xplane.png'
 date = 2024-04-10T11:00:00-07:00
 draft = false
 math = true
